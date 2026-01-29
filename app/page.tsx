@@ -6,6 +6,8 @@ import { ExperienceItem } from "./components/ExperienceItem";
 import { GithubGraph } from "./components/GithubGraph";
 import { TechStack } from "./components/TechStack";
 import { useState, useEffect } from "react";
+import { QRCodeSVG } from "qrcode.react";
+import { QrCode, X } from "lucide-react";
 
 const DiscordIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -15,6 +17,7 @@ const DiscordIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export default function Home() {
   const [time, setTime] = useState<string>("");
+  const [showQR, setShowQR] = useState(false);
 
   useEffect(() => {
     const updateTime = () => {
@@ -340,6 +343,14 @@ export default function Home() {
 
       {/* Glass Island Navbar */}
       <nav className="fixed bottom-6 left-1/2 flex -translate-x-1/2 items-center gap-3 rounded-full border border-gray-200 bg-white/70 px-4 py-3 shadow-sm backdrop-blur-md transition-all hover:bg-white/90 sm:gap-6 sm:px-6">
+        <button
+          onClick={() => setShowQR(true)}
+          className="text-gray-500 transition-colors hover:text-black hover:scale-110"
+          aria-label="Show QR Code"
+        >
+          <QrCode className="h-5 w-5" />
+        </button>
+        <div className="h-6 w-px bg-gray-200" />
         <a
           href="https://github.com/PythonHacker24"
           target="_blank"
@@ -389,6 +400,33 @@ export default function Home() {
           <Calendar className="h-5 w-5" />
         </a>
       </nav>
+
+      {/* QR Code Modal */}
+      {showQR && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm"
+          onClick={() => setShowQR(false)}
+        >
+          <div
+            className="relative rounded-2xl border border-gray-200 bg-white p-8 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowQR(false)}
+              className="absolute -right-3 -top-3 rounded-full bg-black p-2 text-white transition-transform hover:scale-110"
+              aria-label="Close"
+            >
+              <X className="h-4 w-4" />
+            </button>
+            <QRCodeSVG
+              value="https://www.justaditya.com/"
+              size={200}
+              level="H"
+              includeMargin={true}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
