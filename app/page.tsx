@@ -191,7 +191,7 @@ I believe that the best products are built by people who have a diverse range of
 
 ## Get in Touch
 
-Connect with me on [LinkedIn](https://linkedin.com/in/adityapatil) or shoot an [email](mailto:adityapatil24680@gmail.com)
+Connect with me on [LinkedIn](https://www.linkedin.com/in/aditya-patil-260a631b2/) or shoot an [email](mailto:adityapatil24680@gmail.com)
 
 ---
 
