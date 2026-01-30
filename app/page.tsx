@@ -73,10 +73,10 @@ export default function Home() {
 
         <div className="mb-10 w-full space-y-4 text-left text-base leading-relaxed text-gray-600 sm:text-lg md:text-xl">
           <p>
-            a full-stack developer and <span className="underline underline-offset-4">product builder</span> with deep experience across engineering, product strategy, and user-centric design.
+            a full-stack developer and <a href="https://en.wikipedia.org/wiki/Product_design" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-black transition-colors">product builder</a> with deep experience across engineering, product strategy, and user-centric design.
           </p>
           <p>
-            a <span className="underline underline-offset-4">polymath</span> who bridges technical architecture with business outcomes to create impactful, scalable solutions.
+            a <a href="https://en.wikipedia.org/wiki/Polymath" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-black transition-colors">polymath</a> who bridges technical architecture with business outcomes to create impactful, scalable solutions.
           </p>
         </div>
 
@@ -144,6 +144,38 @@ export default function Home() {
             </ExperienceItem>
           </div>
         </div>
+
+
+        {/* In Between These Experiences Section */}
+        <div className="mb-16 w-full text-left">
+          <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400">
+            In Between These Experiences
+          </h2>
+          <div className="rounded-xl border border-gray-200 p-6 sm:p-8">
+            <ExperienceItem
+              title="The Product Building Journey"
+              role=""
+              collapsible={true}
+            >
+              <div className="space-y-4">
+                <p>I've been building and experimenting on the product side for a long time. Each previous product always feels naive in hindsight, but looking back, I can see they were incrementally better, each iteration teaching me something new about users, infrastructure, and what it takes to build something people actually want.</p>
+
+                <p>It started with <span className="font-medium">MetaWiper</span> during my sophomore year, a tool that cleaned image metadata. No one would use it, but I was proud. It was my first real attempt at shipping something complete.</p>
+
+                <p>Next came <span className="font-medium">Stockic</span>, a news app where I spent months doing serious infrastructure work. This was where I learned to build systems that could scale, not just features that looked good.</p>
+
+                <p>Then I worked on <span className="font-medium">Gloss Card</span>, and for the first time, a customer actually wanted to buy it for their product. That validation, knowing someone saw enough value to pay, was a turning point.</p>
+
+                <p>After that, I built <span className="font-medium">NeuraLeap</span>, where I had the most meaningful user interactions yet, HRs from established firms. I worked on data pipelines capable of handling 50 million LinkedIn profiles and processing them with AI. The scale was different, the stakes were higher, and the technical challenges forced me to level up.</p>
+
+                <p>Most recently, I worked on <span className="font-medium">Meteor</span>, an AI SEO toolkit at Entrepreneurs First. This time, my product was being used by 6 YC-backed companies. Real users. Real traction. Real feedback loops.</p>
+
+                <p className="font-medium text-black">So yes, hard work and consistency pay off. Each product was a step forward, even when it didn't feel like it at the time.</p>
+              </div>
+            </ExperienceItem>
+          </div>
+        </div>
+
 
         {/* Education Section */}
         <div className="mb-16 w-full text-left">
@@ -214,6 +246,52 @@ export default function Home() {
           <TechStack />
         </div>
 
+        {/* Recommendations by Clients Section */}
+        <div className="mb-16 w-full text-left">
+          <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400">
+            Recommendations by Clients
+          </h2>
+          <div className="space-y-8">
+            {/* Roy Feldman Recommendation */}
+            <div className="group border-l-2 border-gray-200 pl-6 transition-all hover:border-black">
+              <div className="mb-3">
+                <a
+                  href="https://www.linkedin.com/in/royhax/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base font-semibold text-black underline underline-offset-4 decoration-gray-300 hover:decoration-black transition-colors"
+                >
+                  Roy Feldman
+                </a>
+              </div>
+              <p className="text-sm leading-relaxed text-gray-600">
+                I've had the privilege to work with Aditya on several highly technical cybersecurity R&D projects involving design and implementation of defensive network components in Golang, network protocol research and analysis. He is a bright young engineer, extremely talented in hacking and cybersecurity, with a natural curiosity and passion for hacking, and a gift understanding how systems work, how to design and break them. I am certain that he will succeed in any endeavor he puts his mind to, in the realms of cybersecurity, engineering and beyond! :)
+              </p>
+            </div>
+
+            {/* Tom Granot Recommendation */}
+            <div className="group border-l-2 border-gray-200 pl-6 transition-all hover:border-black">
+              <div className="mb-3">
+                <a
+                  href="https://www.linkedin.com/in/tomgranot/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base font-semibold text-black underline underline-offset-4 decoration-gray-300 hover:decoration-black transition-colors"
+                >
+                  Tom Granot
+                </a>
+              </div>
+              <p className="text-sm leading-relaxed text-gray-600">
+                It's not often that you get to talk to a person who is not only hungry for mentorship, but comes out of the gate with the attitude that enables him to learn so, so quickly on his feet.
+                <br /><br />
+                Aditya did research for highly technical content for me and independently navigated difficult situations without a lot of guidance. If you're looking for someone to research a technical topic for your content work, Aditya is disciplined, thorough and insistent on understanding things in depth before giving a final output.
+                <br /><br />
+                Keep on keeping on brother!
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Videos Section */}
         <div className="mb-16 w-full text-left">
           <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400">
@@ -265,25 +343,63 @@ export default function Home() {
           <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400">
             Library
           </h2>
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-            {[
-              { title: "Linux Kernel Development", author: "Robert Love" },
-              { title: "Hacking: The Art of Exploitation", author: "Jon Erickson" },
-              { title: "Linux in a Nutshell", author: "Ellen Siever, Stephen Figgins, Robert Love, and Arnold Robbins" },
-              { title: "Linux Kernel in a Nutshell", author: "Greg Kroah-Hartman" },
-              { title: "The Art of Electronics", author: "Paul Horowitz and Winfield Hill" },
-              { title: "Nmap Cookbook", author: "Nicholas Marsh" }
-            ].map((book) => (
-              <div key={book.title} className="group flex flex-col gap-1 transition-all">
-                <span className="text-sm font-medium text-black group-hover:underline underline-offset-4 decoration-gray-200 transition-all">
-                  {book.title}
-                </span>
-                <span className="text-xs text-gray-400">
-                  {book.author}
-                </span>
-              </div>
-            ))}
+
+          {/* Dev Subsection */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-500">
+              Dev
+            </h3>
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+              {[
+                { title: "Linux Kernel Development", author: "Robert Love" },
+                { title: "Hacking: The Art of Exploitation", author: "Jon Erickson" },
+                { title: "Linux in a Nutshell", author: "Ellen Siever, Stephen Figgins, Robert Love, and Arnold Robbins" },
+                { title: "Linux Kernel in a Nutshell", author: "Greg Kroah-Hartman" },
+                { title: "The Art of Electronics", author: "Paul Horowitz and Winfield Hill" },
+                { title: "Nmap Cookbook", author: "Nicholas Marsh" }
+              ].map((book) => (
+                <div key={book.title} className="group flex flex-col gap-1 transition-all">
+                  <span className="text-sm font-medium text-black group-hover:underline underline-offset-4 decoration-gray-200 transition-all">
+                    {book.title}
+                  </span>
+                  <span className="text-xs text-gray-400">
+                    {book.author}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
+
+          {/* Casual Reads Subsection */}
+          <div className="mb-4">
+            <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-500">
+              Casual Reads
+            </h3>
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+              {[
+                { title: "Hooked: How to Build Habit-Forming Products", author: "Nir Eyal" },
+                { title: "The Lean Startup", author: "Eric Ries" },
+                { title: "Zero to One", author: "Peter Thiel" },
+                { title: "The Almanack of Naval Ravikant", author: "Eric Jorgenson" },
+                { title: "Deep Work", author: "Cal Newport" },
+                { title: "The Anthology of Balaj", author: "Eric Jorgenson" }
+              ].map((book) => (
+                <div key={book.title} className="group flex flex-col gap-1 transition-all">
+                  <span className="text-sm font-medium text-black group-hover:underline underline-offset-4 decoration-gray-200 transition-all">
+                    {book.title}
+                  </span>
+                  <span className="text-xs text-gray-400">
+                    {book.author}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Note */}
+          <p className="mt-6 text-xs italic text-gray-400">
+            *and many more, these are just one of my best reads
+          </p>
         </div>
 
         {/* Thing about me Section */}

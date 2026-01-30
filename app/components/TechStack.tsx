@@ -15,7 +15,6 @@ const technologies = [
     { name: "FastAPI", slug: "fastapi" },
     { name: "MongoDB", slug: "mongodb" },
     { name: "Shadcn UI", slug: "shadcnui" },
-    { name: "Transformers", slug: "huggingface" },
     { name: "Redis", slug: "redis" },
     { name: "Vercel", slug: "vercel" },
 ];
