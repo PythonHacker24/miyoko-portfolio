@@ -211,7 +211,7 @@ Connect with me on [LinkedIn](https://www.linkedin.com/in/aditya-patil-260a631b2
 
   const [showEasterEgg, setShowEasterEgg] = useState(false);
   const [isLofiPlaying, setIsLofiPlaying] = useState(false);
-  const [lofiVolume, setLofiVolume] = useState(0.5);
+  const [lofiVolume, setLofiVolume] = useState(1);
   const lofiRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
