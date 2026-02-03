@@ -13,6 +13,7 @@ import { ThemeToggle } from "./components/ThemeToggle";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { PomodoroTimer } from "./components/PomodoroTimer";
+import { NeuralNetworkSim } from "./components/NeuralNetworkSim";
 
 import { getMarkdownContent } from "./data/content";
 
@@ -172,17 +173,24 @@ export default function Home() {
             transition={{ duration: 0.35, ease: "easeOut" }}
             className="flex w-full max-w-2xl flex-col items-center text-center"
           >
-            {/* Profile Image */}
-            <div className="relative mb-2 h-40 w-40 grayscale filter sm:h-56 sm:w-56">
+            {/* Profile Image - Easter Egg Trigger */}
+            <button
+              onClick={() => setShowEasterEgg(!showEasterEgg)}
+              className="group relative mb-2 h-40 w-40 grayscale filter sm:h-56 sm:w-56 overflow-hidden cursor-pointer transition-all duration-500 hover:grayscale-0 active:scale-95"
+              aria-label="Toggle Aura Mode"
+            >
               <Image
                 src="/me.png" // User's photo
                 alt="Profile"
                 fill
-                className="object-contain"
+                className={`object-contain transition-all duration-700 ${showEasterEgg ? 'grayscale-0 scale-105' : 'grayscale'}`}
                 priority
               />
               <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white via-white/60 to-transparent dark:from-black dark:via-black/60 backdrop-blur-[1px]" />
-            </div>
+
+              {/* Subtle Glow on Hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_20px_rgba(59,130,246,0.3)] rounded-full pointer-events-none" />
+            </button>
 
             {/* Hero Text */}
             <h1 className="mb-4 text-5xl font-bold tracking-tight sm:text-7xl">
@@ -236,7 +244,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mb-10 w-full space-y-4 text-left text-base leading-relaxed text-gray-600 dark:text-gray-400 sm:text-lg md:text-xl">
+            <div className="w-full space-y-4 text-left text-base leading-relaxed text-gray-600 dark:text-gray-400 sm:text-lg md:text-xl">
               <p>
                 a full-stack developer and <a href="https://en.wikipedia.org/wiki/Product_design" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-black dark:hover:text-white transition-colors">product builder</a> with deep experience across engineering, product strategy, and user-centric design.
               </p>
@@ -244,6 +252,8 @@ export default function Home() {
                 a <a href="https://en.wikipedia.org/wiki/Polymath" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-black dark:hover:text-white transition-colors">polymath</a> who bridges technical architecture with business outcomes to create impactful, scalable solutions.
               </p>
             </div>
+
+            <NeuralNetworkSim />
 
             {/* Experience Section */}
             <div className="mb-16 w-full text-left">
@@ -627,28 +637,7 @@ export default function Home() {
             {/* Pomodoro Timer Section */}
             <PomodoroTimer />
 
-            {/* Easter Egg Trigger */}
-            <div className="mb-16 flex w-full flex-col items-start gap-3 text-left">
-              <div className="flex items-center gap-3">
-                <span className="flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-gray-400">
-                  Easter Egg <ArrowRight className="h-3 w-3" />
-                </span>
-                <button
-                  onClick={() => {
-                    const nextState = !showEasterEgg;
-                    setShowEasterEgg(nextState);
-                  }}
-                  className={`group relative flex h-6 w-10 cursor-pointer items-center rounded-full transition-all duration-300 ${showEasterEgg ? "bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)]" : "bg-gray-200 dark:bg-gray-800"
-                    }`}
-                  aria-label="Toggle Easter Egg"
-                >
-                  <div
-                    className={`h-4 w-4 transform rounded-full bg-white shadow-sm transition-transform duration-300 ${showEasterEgg ? "translate-x-5" : "translate-x-1"
-                      }`}
-                  />
-                </button>
-              </div>
-            </div>
+
 
           </motion.main>
         )}
