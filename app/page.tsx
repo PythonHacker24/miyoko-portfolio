@@ -12,7 +12,6 @@ import { QRCodeSVG } from "qrcode.react";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { PomodoroTimer } from "./components/PomodoroTimer";
 import { NeuralNetworkSim } from "./components/NeuralNetworkSim";
 
 import { getMarkdownContent } from "./data/content";
@@ -634,8 +633,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Pomodoro Timer Section */}
-            <PomodoroTimer />
 
 
 

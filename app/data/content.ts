@@ -10,7 +10,7 @@ A [polymath](https://en.wikipedia.org/wiki/Polymath) who bridges technical archi
 ## Experience
 
 ### Entrepreneur First
-**Founder in Residence**
+**Founder in Residence, Bengaluru**
 [https://www.joinef.com/](https://www.joinef.com/)
 
 As a Founder in Residence at Entrepreneurs First (EF), a premier global talent investor and startup accelerator known for backing exceptional individuals to build transformative companies from scratch, I am fully immersed in designing and developing cutting-edge Agentic AI systems.
