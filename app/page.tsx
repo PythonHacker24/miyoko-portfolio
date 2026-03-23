@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Github, Linkedin, Youtube, Calendar, Bot, User, QrCode, X, ArrowRight, Music, Pause } from "lucide-react";
+import { Github, Linkedin, Youtube, Calendar, Bot, User, QrCode, X, ArrowRight, Music, Pause, ChevronDown, ChevronUp } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 import { ExperienceItem } from "./components/ExperienceItem";
 import { GithubGraph } from "./components/GithubGraph";
@@ -51,6 +51,7 @@ export default function Home() {
 
   const markdownContent = getMarkdownContent(time);
 
+  const [libraryExpanded, setLibraryExpanded] = useState(false);
   const [isLofiPlaying, setIsLofiPlaying] = useState(false);
   const [lofiVolume, setLofiVolume] = useState(1);
   const lofiRef = useRef<HTMLAudioElement | null>(null);
@@ -206,7 +207,7 @@ export default function Home() {
               <div className="space-y-12">
                 <ExperienceItem
                   title="Resonate (YC W26)"
-                  role="Founding Software Engineer, San Francisco, CA"
+                  role="Software Engineer, San Francisco, CA"
                   collapsible={true}
                   link="https://www.ycombinator.com/companies/resonate"
                 >
@@ -380,7 +381,7 @@ export default function Home() {
                 Tech Stack
               </h2>
               <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
-                I&apos;m a generalist at heart who can build with anything, but here&apos;s the core stack I&apos;ve spent the most time with:
+                i&apos;m a generalist at heart who can build with anything, but here&apos;s the core stack i&apos;ve spent the most time with:
               </p>
               <TechStack />
             </div>
@@ -402,6 +403,7 @@ export default function Home() {
                     >
                       Roy Feldman
                     </a>
+                    <span className="ml-2 text-xs font-medium text-gray-500 dark:text-gray-500">Ex. 8200 (Israeli Intelligence Corps)</span>
                   </div>
                   <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                     I've had the privilege to work with Aditya on several highly technical cybersecurity R&D projects involving design and implementation of defensive network components in Golang, network protocol research and analysis. He is a bright young engineer, extremely talented in hacking and cybersecurity, with a natural curiosity and passion for hacking, and a gift understanding how systems work, how to design and break them. I am certain that he will succeed in any endeavor he puts his mind to, in the realms of cybersecurity, engineering and beyond! :)
@@ -419,6 +421,7 @@ export default function Home() {
                     >
                       Tom Granot
                     </a>
+                    <span className="ml-2 text-xs font-medium text-gray-500 dark:text-gray-500">Technical GTM (Israel)</span>
                   </div>
                   <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                     It's not often that you get to talk to a person who is not only hungry for mentorship, but comes out of the gate with the attitude that enables him to learn so, so quickly on his feet.
@@ -436,26 +439,26 @@ export default function Home() {
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 Explainer Videos
               </h2>
-              <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
-                Here is how I explain complex systems on my {" "}
+              <p className="text-lg text-gray-600 dark:text-gray-400">
+                here is how i explain complex systems on my {" "}
                 <a
                   href="https://www.youtube.com/@theracecondition"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300"
                 >
-                  YouTube Channel
+                  youtube channel
+                </a>
+                {" "} <br /> <br /> watch me build {" "}
+                <a
+                  href="https://www.youtube.com/watch?v=m84tBP_4DWE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300"
+                >
+                  spotify system design
                 </a>
               </p>
-              <div className="aspect-video w-full overflow-hidden rounded-xl border border-gray-100 dark:border-gray-900 bg-gray-50 dark:bg-gray-950 shadow-sm transition-all hover:shadow-md grayscale hover:grayscale-0 duration-500">
-                <iframe
-                  src="https://www.youtube.com/embed/m84tBP_4DWE"
-                  title="Explaining Complex Systems"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="h-full w-full"
-                />
-              </div>
             </div>
 
             {/* Writings & Blogs Section */}
@@ -464,16 +467,16 @@ export default function Home() {
                 Writings & Blogs
               </h2>
               <p className="w-full text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-                I host my thoughts on{" "}
+                i host my thoughts on{" "}
                 <a
                   href="https://medium.com/@adityapatil24680"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-black dark:text-white underline underline-offset-4 transition-colors hover:text-gray-600 dark:hover:text-gray-300"
                 >
-                  Medium
+                  medium
                 </a>{" "}
-                rather than building a custom site. Instead of overengineering and reinventing the wheel, I prefer leveraging a mature platform that lets me focus on what matters: sharing insights on AI systems, product strategy, and technical architecture.
+                rather than building a custom site. instead of overengineering and reinventing the wheel, i prefer leveraging a mature platform that lets me focus on what matters: sharing insights on ai systems, product strategy, and technical architecture.
               </p>
             </div>
 
@@ -483,62 +486,79 @@ export default function Home() {
                 Library
               </h2>
 
-              {/* Dev Subsection */}
-              <div className="mb-8">
-                <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-600">
-                  Dev
-                </h3>
-                <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                  {[
-                    { title: "Linux Kernel Development", author: "Robert Love" },
-                    { title: "Hacking: The Art of Exploitation", author: "Jon Erickson" },
-                    { title: "Linux in a Nutshell", author: "Ellen Siever, Stephen Figgins, Robert Love, and Arnold Robbins" },
-                    { title: "Linux Kernel in a Nutshell", author: "Greg Kroah-Hartman" },
-                    { title: "The Art of Electronics", author: "Paul Horowitz and Winfield Hill" },
-                    { title: "Nmap Cookbook", author: "Nicholas Marsh" }
-                  ].map((book) => (
-                    <div key={book.title} className="group flex flex-col gap-1 transition-all">
-                      <span className="text-sm font-medium text-black dark:text-white group-hover:underline underline-offset-4 decoration-gray-200 dark:decoration-gray-800 transition-all">
-                        {book.title}
-                      </span>
-                      <span className="text-xs text-gray-400 dark:text-gray-500">
-                        {book.author}
-                      </span>
-                    </div>
-                  ))}
+              <div className={`relative transition-all duration-500 ${!libraryExpanded ? "max-h-32 overflow-hidden" : ""}`}>
+                {/* Dev Subsection */}
+                <div className="mb-8">
+                  <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-600">
+                    Dev
+                  </h3>
+                  <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                    {[
+                      { title: "Linux Kernel Development", author: "Robert Love" },
+                      { title: "Hacking: The Art of Exploitation", author: "Jon Erickson" },
+                      { title: "Linux in a Nutshell", author: "Ellen Siever, Stephen Figgins, Robert Love, and Arnold Robbins" },
+                      { title: "Linux Kernel in a Nutshell", author: "Greg Kroah-Hartman" },
+                      { title: "The Art of Electronics", author: "Paul Horowitz and Winfield Hill" },
+                      { title: "Nmap Cookbook", author: "Nicholas Marsh" }
+                    ].map((book) => (
+                      <div key={book.title} className="group flex flex-col gap-1 transition-all">
+                        <span className="text-sm font-medium text-black dark:text-white group-hover:underline underline-offset-4 decoration-gray-200 dark:decoration-gray-800 transition-all">
+                          {book.title}
+                        </span>
+                        <span className="text-xs text-gray-400 dark:text-gray-500">
+                          {book.author}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
+
+                {/* Casual Reads Subsection */}
+                <div className="mb-4">
+                  <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-600">
+                    Casual Reads
+                  </h3>
+                  <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                    {[
+                      { title: "Hooked: How to Build Habit-Forming Products", author: "Nir Eyal" },
+                      { title: "The Lean Startup", author: "Eric Ries" },
+                      { title: "Zero to One", author: "Peter Thiel" },
+                      { title: "The Almanack of Naval Ravikant", author: "Eric Jorgenson" },
+                      { title: "Deep Work", author: "Cal Newport" },
+                      { title: "The Anthology of Balaji Srinivasan", author: "Eric Jorgenson" }
+                    ].map((book) => (
+                      <div key={book.title} className="group flex flex-col gap-1 transition-all">
+                        <span className="text-sm font-medium text-black dark:text-white group-hover:underline underline-offset-4 decoration-gray-200 dark:decoration-gray-800 transition-all">
+                          {book.title}
+                        </span>
+                        <span className="text-xs text-gray-400 dark:text-gray-500">
+                          {book.author}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Note */}
+                <p className="mt-6 text-xs italic text-gray-400 dark:text-gray-500">
+                  *and many more, these are just one of my best reads
+                </p>
+
+                {!libraryExpanded && (
+                  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white dark:from-black to-transparent" />
+                )}
               </div>
 
-              {/* Casual Reads Subsection */}
-              <div className="mb-4">
-                <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-600">
-                  Casual Reads
-                </h3>
-                <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                  {[
-                    { title: "Hooked: How to Build Habit-Forming Products", author: "Nir Eyal" },
-                    { title: "The Lean Startup", author: "Eric Ries" },
-                    { title: "Zero to One", author: "Peter Thiel" },
-                    { title: "The Almanack of Naval Ravikant", author: "Eric Jorgenson" },
-                    { title: "Deep Work", author: "Cal Newport" },
-                    { title: "The Anthology of Balaji Srinivasan", author: "Eric Jorgenson" }
-                  ].map((book) => (
-                    <div key={book.title} className="group flex flex-col gap-1 transition-all">
-                      <span className="text-sm font-medium text-black dark:text-white group-hover:underline underline-offset-4 decoration-gray-200 dark:decoration-gray-800 transition-all">
-                        {book.title}
-                      </span>
-                      <span className="text-xs text-gray-400 dark:text-gray-500">
-                        {book.author}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Note */}
-              <p className="mt-6 text-xs italic text-gray-400 dark:text-gray-500">
-                *and many more, these are just one of my best reads
-              </p>
+              <button
+                onClick={() => setLibraryExpanded(!libraryExpanded)}
+                className="mt-3 flex items-center gap-1 text-xs font-medium text-gray-400 dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors"
+              >
+                {libraryExpanded ? (
+                  <>View Less <ChevronUp className="h-3 w-3" /></>
+                ) : (
+                  <>View More <ChevronDown className="h-3 w-3" /></>
+                )}
+              </button>
             </div>
 
             {/* Thing about me Section */}
@@ -548,22 +568,11 @@ export default function Home() {
               </h2>
               <div className="space-y-6">
                 <p className="w-full text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-                  Beyond engineering and build systems, I find balance in the tactile and the thoughtful. Whether it&apos;s exploring the nuances of complex architectures or spending time in the real world, my approach to life is driven by curiosity and a desire to understand how things work at their core.
+                  beyond engineering and build systems, i find balance in the tactile and the thoughtful. whether it&apos;s exploring the nuances of complex architectures or spending time in the real world, my approach to life is driven by curiosity and a desire to understand how things work at their core.
                 </p>
 
-                <div className="flex justify-center">
-                  <div className="relative h-[250px] w-full max-w-sm grayscale hover:grayscale-0 transition-all duration-700 sm:h-[350px]" style={{ maskImage: "radial-gradient(circle, black 40%, transparent 95%)", WebkitMaskImage: "radial-gradient(circle, black 40%, transparent 95%)" }}>
-                    <Image
-                      src="/casual.png"
-                      alt="Casual photo"
-                      fill
-                      className="object-contain object-center"
-                    />
-                  </div>
-                </div>
-
-                <p className="w-full text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-                  I believe that the best products are built by people who have a diverse range of interests. It&apos;s the unique combination of technical depth and human perspective that allows us to create technology that actually resonates.
+<p className="w-full text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                  i believe that the best products are built by people who have a diverse range of interests. it&apos;s the unique combination of technical depth and human perspective that allows us to create technology that actually resonates.
                 </p>
               </div>
             </div>
@@ -575,14 +584,14 @@ export default function Home() {
               </h2>
               <div className="space-y-4">
                 <p className="text-lg text-gray-600 dark:text-gray-400">
-                  Connect with me on{" "}
+                  connect with me on{" "}
                   <a
                     href="https://www.linkedin.com/in/aditya-patil-260a631b2/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300"
                   >
-                    LinkedIn
+                    linkedin
                   </a>{" "}
                   or{" "} shoot an {" "}
                   <a

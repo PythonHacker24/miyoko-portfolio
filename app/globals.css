@@ -24,6 +24,7 @@ body {
   font-family: var(--font-dm-sans), sans-serif;
 }
 
+
 @keyframes infinite-scroll {
   from {
     transform: translateX(0);

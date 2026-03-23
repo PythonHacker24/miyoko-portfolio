@@ -10,7 +10,7 @@ A [polymath](https://en.wikipedia.org/wiki/Polymath) who bridges technical archi
 ## Experience
 
 ### Resonate (YC W26)
-**Founding Software Engineer, San Francisco, CA**
+**Software Engineer, San Francisco, CA**
 *February 2026 - Present*
 
 As an early software engineer bridging product strategy and technical execution, I am driving the development of an AI-native messaging platform from zero to one.
