@@ -9,7 +9,7 @@ A [polymath](https://en.wikipedia.org/wiki/Polymath) who bridges technical archi
 
 ## Experience
 
-### Resonate (YC W26)
+### Remix (YC W26)
 **Software Engineer, San Francisco, CA**
 *February 2026 - Present*
 
@@ -90,6 +90,25 @@ Most recently, I worked on **Meteor**, an AI SEO toolkit at Entrepreneurs First.
 
 **So yes, hard work and consistency pay off. Each product was a step forward, even when it didn't feel like it at the time.**
 
+## Coolest Experiment with Consumer Tech
+
+### Double Dart
+**Anonymous crush matching for NIT Hamirpur, Class of 2026**
+[https://www.doubledart.fun/](https://www.doubledart.fun/)
+
+A 3-day social experiment shipped with a batchmate: graduating students anonymously dart the people they noticed over four years. A crush stays sealed forever unless it is mutual, and only then are both names revealed. Built lean on Supabase and Vercel with college-email Google sign-in, no ops team, no data hoarding. The database was destroyed after the event and only anonymized stats remain.
+
+- 201 sign-ups in 3 days
+- 238 crushes sent
+- 11 mutual pairs matched
+- 766 unique visitors
+- 80.7K Supabase requests
+- 3.2K page views
+- 85% mobile traffic
+- 9.2% of crushes reciprocated
+
+Full case study: [https://www.doubledart.fun/case-study](https://www.doubledart.fun/case-study)
+
 ## Education
 
 ### National Institute of Technology Hamirpur
@@ -106,7 +125,7 @@ Authors: Aditya Patil; T. S. Sreeram
 **Abstract:**
 Supervisory Control and Data Acquisition systems are the backbone of managing critical infrastructure in modern industrial control systems, spanning sectors from power generation to logistics. However, these systems face significant challenges due to threats from malicious actors. The Modbus protocol, despite its known lack of security features, is still used in many industries managing critical infrastructure due to the high cost of replacing existing systems. As a result, these legacy systems remain vulnerable to potentially damaging threats. This paper proposes an adapter device for enhancing the security of the Modbus protocol without replacing devices in legacy systems. The proposed adapter is cost-efficient, provides cross-platform support, and is easy to install, update, and maintain.
 
-## Tech Stack
+## Generalist by Heart, Specialist by Profession
 
 Next.js, Go, Python, Hugging Face, TypeScript, React, Tailwind CSS, GitHub, Git, Docker, PostgreSQL, FastAPI, MongoDB, Shadcn UI, Redis, Vercel
 
@@ -122,41 +141,18 @@ Aditya did research for highly technical content for me and independently naviga
 
 Keep on keeping on brother!
 
-## Explainer Videos
+## YouTuber @theracecondition
 
-Here is how I explain complex systems on my [YouTube Channel](https://www.youtube.com/@theracecondition)
+I run [The Race Condition](https://www.youtube.com/@theracecondition), where I break down complex systems and engineering ideas. The channel has driven 300+ members into the [Discord community](https://discord.gg/ry4YCJaShK).
 
-Featured Video: [https://www.youtube.com/embed/m84tBP_4DWE](https://www.youtube.com/embed/m84tBP_4DWE)
+Selected videos:
+- [System Design: Building Dropbox (File Sync & Storage Service)](https://www.youtube.com/watch?v=6Bkvdyb3pvs)
+- [System Design: Building Spotify (Music Streaming Service)](https://www.youtube.com/watch?v=m84tBP_4DWE)
+- [Understanding REST APIs for System Design](https://www.youtube.com/watch?v=-btg5UuI6dw)
+- [Top 5 Programming Languages for 2026](https://www.youtube.com/watch?v=lJXq8o6o0jY)
+- [Reviewing my 47 Pages GSoC Proposal](https://www.youtube.com/watch?v=6HOlwQxgqDs)
 
-## Writings & Blogs
-
-I host my thoughts on [Medium](https://medium.com/@adityapatil24680) rather than building a custom site. Instead of overengineering and reinventing the wheel, I prefer leveraging a mature platform that lets me focus on what matters: sharing insights on AI systems, product strategy, and technical architecture.
-
-## Library
-
-### Dev
-- **Linux Kernel Development** by Robert Love
-- **Hacking: The Art of Exploitation** by Jon Erickson
-- **Linux in a Nutshell** by Ellen Siever, Stephen Figgins, Robert Love, and Arnold Robbins
-- **Linux Kernel in a Nutshell** by Greg Kroah-Hartman
-- **The Art of Electronics** by Paul Horowitz and Winfield Hill
-- **Nmap Cookbook** by Nicholas Marsh
-
-### Casual Reads
-- **Hooked: How to Build Habit-Forming Products** by Nir Eyal
-- **The Lean Startup** by Eric Ries
-- **Zero to One** by Peter Thiel
-- **The Almanack of Naval Ravikant** by Eric Jorgenson
-- **Deep Work** by Cal Newport
-- **The Anthology of Balaji Srinivasan** by Eric Jorgenson
-
-*and many more, these are just one of my best reads
-
-## Thing About Me
-
-Beyond engineering and build systems, I find balance in the tactile and the thoughtful. Whether it's exploring the nuances of complex architectures or spending time in the real world, my approach to life is driven by curiosity and a desire to understand how things work at their core.
-
-I believe that the best products are built by people who have a diverse range of interests. It's the unique combination of technical depth and human perspective that allows us to create technology that actually resonates.
+...and much more on the channel.
 
 ## Get in Touch
 
@@ -170,5 +166,6 @@ Connect with me on [LinkedIn](https://www.linkedin.com/in/aditya-patil-260a631b2
 - Twitter: [https://x.com/firecaffeine](https://x.com/firecaffeine)
 - YouTube: [https://youtube.com/@theracecondition](https://youtube.com/@theracecondition)
 - Discord: [https://discord.gg/ry4YCJaShK](https://discord.gg/ry4YCJaShK)
+- Medium: [https://medium.com/@adityapatil24680](https://medium.com/@adityapatil24680)
 - Calendar: [https://cal.com/adi-patil/30min](https://cal.com/adi-patil/30min)
 `;
